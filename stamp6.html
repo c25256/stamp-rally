@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>スタンプ6ゲット！</title>
+</head>
+<body>
+  <h1>スタンプ6をゲットしました！</h1>
+  <img src="assets/stamps/stamp6.png" alt="スタンプ6">
+  <script>
+    localStorage.setItem("stamp6", "true");
+    // 3秒後にメインページへ戻る
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 3000);
+  </script>
+</body>
+</html>
