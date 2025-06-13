@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>学園祭スタンプラリー</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
   <h1>美来工科学園祭スタンプラリー</h1>
@@ -15,6 +16,10 @@
             <td><img src="assets/stamps/empty.png" id="stamp-4"></td><td><img src="assets/stamps/empty.png" id="stamp-5"></td><td><img src="assets/stamps/empty1.png" id="stamp-6"></td>
         </tr>
     </table>
+  <div id="qr-reader" style="width:320px; margin: 20px auto;"></div>
+  <div id="qr-result" style="text-align:center; font-weight:bold; margin-top:10px;">
+    読み取ったQRコード内容：<span id="qr-content">なし</span>
+  </div>
   <script src="js/main.js"></script>
 </body>
 </html>
