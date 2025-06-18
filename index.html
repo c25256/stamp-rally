@@ -16,10 +16,17 @@
             <td><img src="assets/stamps/empty.png" id="stamp-4"></td><td><img src="assets/stamps/empty.png" id="stamp-5"></td><td><img src="assets/stamps/empty1.png" id="stamp-6"></td>
         </tr>
     </table>
-  <div id="qr-reader" style="width:320px; margin: 20px auto;"></div>
-  <div id="qr-result" style="text-align:center; font-weight:bold; margin-top:10px;">
-    読み取ったQRコード内容：<span id="qr-content">なし</span>
-  </div>
+<script src="https://unpkg.com/html5-qrcode"></script>
+<div id="reader"></div>
+<script>
+  function onScanSuccess(decodedText) {
+    window.location.href = decodedText; // 自動遷移
+  }
+
+  new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 })
+    .render(onScanSuccess);
+</script>
+
   <script src="js/main.js"></script>
 </body>
 </html>
