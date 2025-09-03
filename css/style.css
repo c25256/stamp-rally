@@ -1,4 +1,7 @@
-﻿body{
+h1{
+	text-align:center;
+}
+body{
 	text-align:center；
 	
   background:#ec6a38;
@@ -49,3 +52,4 @@ style{
         margin: auto;
     }
 }
+
