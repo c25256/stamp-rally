@@ -28,38 +28,12 @@
 
   new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 })
     .render(onScanSuccess);
-  <body>
-  
-
-  <!-- ボタン -->
-  <button id="cameraBtn">カメラを起動する</button>
-
-  <!-- カメラ表示用 -->
-  <div id="reader" style="display:none;"></div>
-
-  <script>
-    const cameraBtn = document.getElementById('cameraBtn');
-    const reader = document.getElementById('reader');
-    let scanner;
-
-    cameraBtn.addEventListener('click', () => {
-      cameraBtn.style.display = 'none';
-      reader.style.display = 'block';
-      scanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
-      scanner.render(onScanSuccess);
-    });
-
-    function onScanSuccess(decodedText) {
-      window.location.href = decodedText;
-    }
-  </script>
-</body>
-
 </script>
 
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
