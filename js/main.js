@@ -36,23 +36,5 @@ window.addEventListener("load", () => {
   );
   html5QrcodeScanner.render(onScanSuccess);
 });
-const cameraBtn = document.getElementById('cameraBtn');
-const reader = document.getElementById('reader');
-let scanner; // html5-qrcodeインスタンスを保持
 
-cameraBtn.addEventListener('click', () => {
-  // ボタン非表示にする（必要なら）
-  cameraBtn.style.display = 'none';
-
-  // readerを表示
-  reader.style.display = 'block';
-
-  // カメラ起動（scannerを初期化してrender）
-  scanner = new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 });
-  scanner.render(onScanSuccess);
-});
-
-function onScanSuccess(decodedText) {
-  window.location.href = decodedText; // QRコード読み取り成功後に遷移
-}
 
