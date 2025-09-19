@@ -54,22 +54,3 @@ style{
     }
 }
 
-#cameraBtn {
-  padding: 20px 50px;
-  font-size: 24px;
-  border-radius: 12px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-  user-select: none;
-  margin: 20px auto;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-#cameraBtn:hover {
-  background-color: #0056b3;
-}
-
-
-
