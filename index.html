@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>学園祭スタンプラリー</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- ✅ QRコードライブラリ読み込み（1回だけ） -->
+  <link rel="stylesheet" href="css/style.css" />
   <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
@@ -12,44 +11,33 @@
 
   <table align="center" border="1">
     <tr>
-      <td><img src="assets/stamps/empty1.png" id="stamp-1"></td>
-      <td><img src="assets/stamps/empty2.png" id="stamp-2"></td>
-      <td><img src="assets/stamps/empty3.png" id="stamp-3"></td>
+      <td><img src="assets/stamps/empty1.png" id="stamp-1" class="stamp-img" /></td>
+      <td><img src="assets/stamps/empty2.png" id="stamp-2" class="stamp-img" /></td>
+      <td><img src="assets/stamps/empty3.png" id="stamp-3" class="stamp-img" /></td>
     </tr>
     <tr>
-      <td><img src="assets/stamps/empty4.png" id="stamp-4"></td>
-      <td><img src="assets/stamps/empty5.png" id="stamp-5"></td>
-      <td><img src="assets/stamps/empty6.png" id="stamp-6"></td>
+      <td><img src="assets/stamps/empty4.png" id="stamp-4" class="stamp-img" /></td>
+      <td><img src="assets/stamps/empty5.png" id="stamp-5" class="stamp-img" /></td>
+      <td><img src="assets/stamps/empty6.png" id="stamp-6" class="stamp-img" /></td>
     </tr>
     <tr>
-      <td><img src="assets/stamps/empty7.png" id="stamp-7"></td>
-      <td><img src="assets/stamps/empty8.png" id="stamp-8"></td>
-      <td><img src="assets/stamps/empty9.png" id="stamp-9"></td>
+      <td><img src="assets/stamps/empty7.png" id="stamp-7" class="stamp-img" /></td>
+      <td><img src="assets/stamps/empty8.png" id="stamp-8" class="stamp-img" /></td>
+      <td><img src="assets/stamps/empty9.png" id="stamp-9" class="stamp-img" /></td>
     </tr>
   </table>
 
   <!-- カメラ起動ボタン -->
-<button id="start-camera" style="background:none; border:none; cursor:pointer; display: block; margin: 20px auto;">
-  <img src="assets/icons/camera-icon.png" alt="カメラ起動" width="80">
-</button>
+  <button id="start-camera" type="button" aria-label="カメラ起動ボタン">
+    <img src="assets/icons/camera-icon.png" alt="カメラアイコン" />
+  </button>
 
-<!-- QRコード読み取り表示エリア（最初は非表示） -->
-<div id="qr-reader" style="width: 300px; margin: 20px auto; display: none;"></div>
+  <!-- QRコード読み取り表示エリア（最初は非表示） -->
+  <div id="qr-reader" style="display: none;"></div>
 
-<!-- 読み取り結果表示 -->
-<p id="qr-content" style="text-align: center;"></p>
+  <!-- 読み取り結果表示 -->
+  <p id="qr-content"></p>
 
-
- <button id="start-camera" style="font-size: 48px; margin: 20px auto; display: block; background:none; border:none; cursor:pointer;">
-  📷
-</button>
-
-
-  <!-- ✅ その他のスクリプトがあればここ -->
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
