@@ -29,12 +29,15 @@ window.addEventListener("load", () => {
   }
 
   // QRコードスキャナー初期化・開始
-  window.html5QrcodeScanner = new Html5QrcodeScanner(
-    "qr-reader",
-    { fps: 10, qrbox: 250 },
-    false
-  );
-  html5QrcodeScanner.render(onScanSuccess);
-});
-
+const html5QrCode = new Html5Qrcode("reader"); // ← QRコードを表示するdivのID
+html5QrCode.start(
+  { facingMode: "environment" }, // 背面カメラ
+  { fps: 10, qrbox: 250 },       // 設定（オプション）
+  (decodedText, decodedResult) => {
+    console.log("読み取った内容:", decodedText);
+  },
+  (errorMessage) => {
+    // スキャン失敗時の処理（省略可）
+  }
+);
 
