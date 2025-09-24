@@ -28,28 +28,28 @@
     </tr>
   </table>
 
-  <!-- ✅ カメラ映像を表示する場所 -->
-  <div id="reader" style="width: 300px; margin: 20px auto;"></div>
+  <!-- カメラ起動ボタン -->
+<button id="start-camera" style="background:none; border:none; cursor:pointer; display: block; margin: 20px auto;">
+  <img src="assets/icons/camera-icon.png" alt="カメラ起動" width="80">
+</button>
 
-  <!-- ✅ QRコード読み取りスクリプト -->
-  <script>
-    function onScanSuccess(decodedText) {
-      // 読み取ったQRコードの内容に自動で遷移（例：URL）
-      window.location.href = decodedText;
-    }
+<!-- QRコード読み取り表示エリア（最初は非表示） -->
+<div id="qr-reader" style="width: 300px; margin: 20px auto; display: none;"></div>
 
-    const scanner = new Html5QrcodeScanner("reader", {
-      fps: 10,
-      qrbox: 250
-    });
+<!-- 読み取り結果表示 -->
+<p id="qr-content" style="text-align: center;"></p>
 
-    scanner.render(onScanSuccess);
-  </script>
+
+ <button id="start-camera" style="font-size: 48px; margin: 20px auto; display: block; background:none; border:none; cursor:pointer;">
+  📷
+</button>
+
 
   <!-- ✅ その他のスクリプトがあればここ -->
   <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
