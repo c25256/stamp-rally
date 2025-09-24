@@ -67,5 +67,17 @@ window.addEventListener("load", () => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  // ...（スタンプの復元処理）
+});
+
+function onScanSuccess(decodedText, decodedResult) {
+  // ...（読み取り成功処理）
+}
+
+window.addEventListener("load", () => {
+  // ...（ボタン押したらカメラ起動処理）
+});
+
 
 
