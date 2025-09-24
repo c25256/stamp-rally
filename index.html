@@ -4,37 +4,52 @@
   <meta charset="UTF-8">
   <title>学園祭スタンプラリー</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- ✅ QRコードライブラリ読み込み（1回だけ） -->
   <script src="https://unpkg.com/html5-qrcode"></script>
 </head>
 <body>
   <h1>美来工科学園祭スタンプラリー</h1>
+
   <table align="center" border="1">
-        <tr>
-            <td><img src="assets/stamps/empty1.png" id="stamp-1"></td><td><img src="assets/stamps/empty2.png" id="stamp-2"></td><td><img src="assets/stamps/empty3.png" id="stamp-3"></td>
-        </tr>
-        <tr>
-            <td><img src="assets/stamps/empty4.png" id="stamp-4"></td><td><img src="assets/stamps/empty5.png" id="stamp-5"></td><td><img src="assets/stamps/empty6.png" id="stamp-6"></td>
-        </tr>
-        <tr>
-            <td><img src="assets/stamps/empty7.png" id="stamp-7"></td><td><img src="assets/stamps/empty8.png" id="stamp-8"></td><td><img src="assets/stamps/empty9.png" id="stamp-9"></td>
-        </tr>
+    <tr>
+      <td><img src="assets/stamps/empty1.png" id="stamp-1"></td>
+      <td><img src="assets/stamps/empty2.png" id="stamp-2"></td>
+      <td><img src="assets/stamps/empty3.png" id="stamp-3"></td>
+    </tr>
+    <tr>
+      <td><img src="assets/stamps/empty4.png" id="stamp-4"></td>
+      <td><img src="assets/stamps/empty5.png" id="stamp-5"></td>
+      <td><img src="assets/stamps/empty6.png" id="stamp-6"></td>
+    </tr>
+    <tr>
+      <td><img src="assets/stamps/empty7.png" id="stamp-7"></td>
+      <td><img src="assets/stamps/empty8.png" id="stamp-8"></td>
+      <td><img src="assets/stamps/empty9.png" id="stamp-9"></td>
+    </tr>
   </table>
-<script src="https://unpkg.com/html5-qrcode"></script>
-<div id="reader"></div>
-<script>
-  function onScanSuccess(decodedText) {
-    window.location.href = decodedText; // 自動遷移
-  }
 
-  new Html5QrcodeScanner("reader", { fps: 10, qrbox: 250 })
-    .render(onScanSuccess);
-</script>
+  <!-- ✅ カメラ映像を表示する場所 -->
+  <div id="reader" style="width: 300px; margin: 20px auto;"></div>
 
+  <!-- ✅ QRコード読み取りスクリプト -->
+  <script>
+    function onScanSuccess(decodedText) {
+      // 読み取ったQRコードの内容に自動で遷移（例：URL）
+      window.location.href = decodedText;
+    }
+
+    const scanner = new Html5QrcodeScanner("reader", {
+      fps: 10,
+      qrbox: 250
+    });
+
+    scanner.render(onScanSuccess);
+  </script>
+
+  <!-- ✅ その他のスクリプトがあればここ -->
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
 
 
 
