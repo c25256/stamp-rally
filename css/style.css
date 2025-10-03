@@ -57,6 +57,7 @@ h1 {
 #qr-reader {
   width: 300px;
   margin: 20px auto;
+  size:80px;
 }
 
 /* 読み取り結果テキスト */
@@ -66,6 +67,7 @@ h1 {
   color: #fff;
   font-weight: bold;
 }
+
 
 
 
