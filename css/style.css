@@ -11,16 +11,18 @@ body {
 
 /* 背景色のアニメーション */
 @-webkit-keyframes colour {
-  0% { background: #ec6a38; }
-  40% { background: #ec4038; }
-  80% { background: #ec9138; }
-  100% { background: #ec6a38; }
+  0% { background: #E9967A; }
+　20%{ background: #ADD8E6;  }
+  40% { background: #00FF7F;}
+  80% { background: #FFFACD;}
+  100% { background: #556B2F;}
 }
 @-moz-keyframes colour {
-  0% { background: #ec6a38; }
-  40% { background: #ec4038; }
-  80% { background: #ec9138; }
-  100% { background: #ec6a38; }
+  0% { background: #E9967A; }
+　20%{ background: #ADD8E6;  }
+  40% { background: #00FF7F;}
+  80% { background: #FFFACD;}
+  100% { background: #556B2F;}
 }
 
 /* h1 見出し */
@@ -67,6 +69,7 @@ h1 {
   color: #fff;
   font-weight: bold;
 }
+
 
 
 
