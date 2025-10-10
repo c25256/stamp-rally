@@ -19,10 +19,10 @@ body {
 }
 @-moz-keyframes colour {
   0% { background: #E9967A; }
-　20%{ background: #ADD8E6;  }
-  40% { background: #00FF7F;}
-  80% { background: #FFFACD;}
-  100% { background: #556B2F;}
+　20%{ background: #FA8072;  }
+  40% { background: #FF4F50;}
+  80% { background: #DB7093;}
+  100% { background: #C71585;}
 }
 
 /* h1 見出し */
@@ -69,6 +69,7 @@ h1 {
   color: #fff;
   font-weight: bold;
 }
+
 
 
 
