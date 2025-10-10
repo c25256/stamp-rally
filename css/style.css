@@ -11,11 +11,11 @@ body {
 
 /* 背景色のアニメーション */
 @-webkit-keyframes colour {
-  0% { background: #E9967A; }
-　20%{ background: #ADD8E6;  }
-  40% { background: #00FF7F;}
-  80% { background: #FFFACD;}
-  100% { background: #556B2F;}
+  0% { background: #D8BfD8; }
+　20%{ background: #DDA0DD;  }
+  40% { background: #DA70D6;}
+  80% { background: #EE82EE;}
+  100% { background: #BA55D3;}
 }
 @-moz-keyframes colour {
   0% { background: #E9967A; }
@@ -69,6 +69,7 @@ h1 {
   color: #fff;
   font-weight: bold;
 }
+
 
 
 
