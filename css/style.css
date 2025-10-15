@@ -51,9 +51,9 @@ h1 {
 
 /* カメラアイコンのサイズ */
 #start-camera img {
-  width: 200px;
-  height: 200px;
-  margin: 30px auto;
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
 }
 
 /* QRコードリーダーのサイズと中央配置 */
@@ -69,6 +69,7 @@ h1 {
   color: #fff;
   font-weight: bold;
 }
+
 
 
 
