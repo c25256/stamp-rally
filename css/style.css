@@ -54,6 +54,7 @@ h1 {
   width: 300px;
   height: 300px;
   margin: 30px auto;
+  text-align: center;
 }
 
 /* QRコードリーダーのサイズと中央配置 */
@@ -69,6 +70,7 @@ h1 {
   color: #fff;
   font-weight: bold;
 }
+
 
 
 
