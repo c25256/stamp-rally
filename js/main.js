@@ -14,9 +14,11 @@ function onScanSuccess(decodedText, decodedResult) {
   }
 
   // ✅ 読み取った内容がURL形式ならページ遷移
-  if (decodedText.startsWith("http://") || decodedText.startsWith("https://")) {
-    window.location.href = decodedText;
-    return; // 遷移するのでそれ以降は実行されない
+　　if (decodedText.startsWith("http://") || decodedText.startsWith("https://")) {
+  　const qrContent = document.getElementById("qr-content");
+  　qrContent.innerHTML = `<a href="${decodedText}" target="_blank" style="font-size: 20px;">▶ リンクを開く</a>`;
+　}
+
   }
 
   // カメラ停止して非表示に戻す（URLの場合はすでに return 済み）
@@ -74,6 +76,7 @@ function onScanSuccess(decodedText, decodedResult) {
 window.addEventListener("load", () => {
   // ...（ボタン押したらカメラ起動処理）
 });
+
 
 
 
