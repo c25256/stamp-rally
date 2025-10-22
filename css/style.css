@@ -43,7 +43,7 @@ h1 {
   border: none;
   cursor: pointer;
   display: block;
-  margin: 20px auto;
+  margin: 60px auto;
   width: 100px;
   height: 100px;
   padding: 0;
@@ -53,7 +53,6 @@ h1 {
 #start-camera img {
   width: 300px;
   height: 300px;
-  padding-left: auto;
 }
 
 /* QRコードリーダーのサイズと中央配置 */
@@ -69,6 +68,7 @@ h1 {
   color: #fff;
   font-weight: bold;
 }
+
 
 
 
