@@ -4,12 +4,89 @@
   <meta charset="UTF-8">
   <title>スタンプ1ゲット！</title>
   <link rel="stylesheet" href="css/style2.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #74b9ff, #a29bfe);
+      color: #fff;
+      font-family: "Hiragino Maru Gothic ProN", "Segoe UI", sans-serif;
+      text-align: center;
+      overflow: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 80px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+      animation: pop 0.8s ease-out;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      margin-top: 30px;
+      animation: bounce 1.5s infinite ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* 紙吹雪用 */
+    .confetti {
+      position: fixed;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      opacity: 0.8;
+      pointer-events: none;
+      animation: fall linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotateZ(360deg);
+        opacity: 0.9;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>スタンプ1をゲットしました！</h1>
-<img src="assets/stamps/stamp1.png" alt="スタンプ1">
+  <h1>🎉 スタンプ1をゲットしました！ 🎉</h1>
+  <img src="assets/stamps/stamp1.png" alt="スタンプ1">
+
   <script>
+    // スタンプ獲得を保存
     localStorage.setItem("stamp1", "true");
+
+    // 紙吹雪生成
+    const colors = ["#f6d365", "#fda085", "#a8edea", "#fbc2eb", "#84fab0", "#8fd3f4"];
+    for (let i = 0; i < 100; i++) {
+      const confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.animationDuration = 3 + Math.random() * 3 + "s";
+      confetti.style.width = confetti.style.height = 6 + Math.random() * 6 + "px";
+      confetti.style.animationDelay = Math.random() * 2 + "s";
+      confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+      document.body.appendChild(confetti);
+    }
+
     // 3秒後にメインページへ戻る
     setTimeout(() => {
       window.location.href = "index.html";
