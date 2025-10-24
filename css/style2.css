@@ -1,7 +1,11 @@
-h1{
+/* ページ全体中央揃え */
+body {
   text-align: center;
+  background: #ec6a38;
+  -webkit-animation: colour 10s linear infinite;
+  -moz-animation: colour 10s linear infinite;
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
-
 
