@@ -1,3 +1,6 @@
+h1 {
+  font-family: "Nico Moji";
+}
 /* ページ全体中央揃え */
 body {
   text-align: center;
@@ -68,6 +71,7 @@ h1 {
   color: #fff;
   font-weight: bold;
 }
+
 
 
 
