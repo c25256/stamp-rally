@@ -89,28 +89,6 @@ window.addEventListener("load", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  let allStampsCollected = true;
-  for (let i = 1; i <= 6; i++) {
-    const stampKey = `stamp${i}`;
-    const hasStamp = localStorage.getItem(stampKey);
-    const img = document.getElementById(`stamp-${i}`);
-    if (hasStamp === "true") {
-      img.src = `assets/stamps/stamp${i}.png`;
-    } else {
-      allStampsCollected = false;
-    }
-  }
-
-  // スタンプが全て集まっていた場合、おめでとうメッセージを表示
-  if (allStampsCollected) {
-    document.getElementById("congratulations").style.display = "block";
-  }
-
-  // QRリーダーを非表示
-  document.getElementById("qr-reader").style.display = "none";
-  document.getElementById("start-camera").style.display = "inline-block";
-});
 
 
 
