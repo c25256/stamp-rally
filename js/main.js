@@ -36,7 +36,7 @@ function onScanSuccess(decodedText, decodedResult) {
     }
 
     // スタンプ6がゲットされたら、コンプリートページへ遷移
-    if (num === '6') {  // numは文字列として扱うので、'6'で比較
+    if (num === 'スタンプ6') {  // numは文字列として扱うので、'6'で比較
       setTimeout(() => {
         window.location.href = "complete.html"; // スタンプコンプリートページに遷移
       }, 1000); // 1秒後に遷移
@@ -95,6 +95,7 @@ window.addEventListener("load", () => {
     });
   });
 });
+
 
 
 
