@@ -1,0 +1,56 @@
+<!-- complete.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>スタンプコンプリート！</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #6c5ce7;
+      color: white;
+      font-family: "Segoe UI", sans-serif;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+      background-color: #ff8a65;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #f6d365;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 スタンプコンプリート！ 🎉</h1>
+  <p>全てのスタンプをゲットしました！</p>
+  <button onclick="window.location.href='index.html'">スタンプカードへ戻る</button>
+</body>
+</html>
