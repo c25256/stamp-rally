@@ -108,7 +108,7 @@ function onScanSuccess(decodedText, decodedResult) {
     if (num == 6) {
       setTimeout(() => {
         window.location.href = "complete.html"; // スタンプコンプリートページに遷移
-      }, 1000); // 1秒後に遷移
+      }, 3000); // 3秒後に遷移
     }
 
     // カメラ停止と表示切り替え
@@ -128,6 +128,7 @@ function onScanSuccess(decodedText, decodedResult) {
     return;
   }
 }
+
 
 
 
