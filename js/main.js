@@ -26,13 +26,20 @@ function onScanSuccess(decodedText, decodedResult) {
   document.getElementById("qr-content").textContent = decodedText;
   localStorage.setItem("qrData", decodedText);
 
-  // === ✅ スタンプ用QRコードだった場合 ===
+  // スタンプ用QRコードだった場合
   if (decodedText.startsWith("stamp")) {
     const num = decodedText.replace("stamp", "");
     const img = document.getElementById(`stamp-${num}`);
     if (img) {
       img.src = `assets/stamps/stamp${num}.png`;
       localStorage.setItem(`stamp${num}`, "true");
+    }
+
+    // スタンプ6がゲットされたら、コンプリートページへ遷移
+    if (num === '6') {  // numは文字列として扱うので、'6'で比較
+      setTimeout(() => {
+        window.location.href = "complete.html"; // スタンプコンプリートページに遷移
+      }, 1000); // 1秒後に遷移
     }
 
     // カメラ停止と表示切り替え
@@ -43,16 +50,16 @@ function onScanSuccess(decodedText, decodedResult) {
       console.error("カメラ停止エラー:", err);
     });
 
-    return;
+    return;  // 他のQRコード処理を防ぐ
   }
 
-  // === ✅ URLだった場合は自動遷移 ===
+  // その他のQRコード（URL等）だった場合は自動遷移
   if (decodedText.startsWith("http://") || decodedText.startsWith("https://")) {
     window.location.href = decodedText;
     return;
   }
 
-  // === ✅ それ以外の内容だった場合（リンクを表示）===
+  // その他の内容（リンク）を表示
   const qrContent = document.getElementById("qr-content");
   qrContent.innerHTML = `<a href="${decodedText}" target="_blank" style="font-size: 18px;">▶ リンクを開く</a>`;
 
@@ -88,46 +95,6 @@ window.addEventListener("load", () => {
     });
   });
 });
-
-// QRコード読み取り成功時の処理
-function onScanSuccess(decodedText, decodedResult) {
-  console.log(`読み取った内容: ${decodedText}`);
-  document.getElementById("qr-content").textContent = decodedText;
-  localStorage.setItem("qrData", decodedText);
-
-  // スタンプ用QRコードだった場合
-  if (decodedText.startsWith("stamp")) {
-    const num = decodedText.replace("stamp", "");
-    const img = document.getElementById(`stamp-${num}`);
-    if (img) {
-      img.src = `assets/stamps/stamp${num}.png`;
-      localStorage.setItem(`stamp${num}`, "true");
-    }
-
-    // スタンプ6がゲットされたら、コンプリートページへ遷移
-    if (num == 6) {
-      setTimeout(() => {
-        window.location.href = "complete.html"; // スタンプコンプリートページに遷移
-      }, 3000); // 3秒後に遷移
-    }
-
-    // カメラ停止と表示切り替え
-    html5QrcodeScanner.stop().then(() => {
-      document.getElementById("qr-reader").style.display = "none";
-      document.getElementById("start-camera").style.display = "inline-block";
-    }).catch(err => {
-      console.error("カメラ停止エラー:", err);
-    });
-
-    return;
-  }
-
-  // その他のQRコード（URL等）だった場合は自動遷移
-  if (decodedText.startsWith("http://") || decodedText.startsWith("https://")) {
-    window.location.href = decodedText;
-    return;
-  }
-}
 
 
 
