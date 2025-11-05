@@ -58,18 +58,18 @@
     }
   </style>
 </head>
-<body onload="showDateTime()">
+<body onload="showFixedDateTime()">
   <h1>🎉 スタンプコンプリート！ 🎉</h1>
   <img src="waribiki.png" alt="割引券" />
   <p>全てのスタンプをゲットしました！</p>
 
-  <!-- 現在の日付と時刻を表示する場所 -->
+  <!-- 固定した日付と時刻を表示 -->
   <p id="datetime"></p>
 
   <button onclick="window.location.href='index.html'">スタンプカードへ戻る</button>
 
   <script>
-    function showDateTime() {
+    function showFixedDateTime() {
       const now = new Date();
       const year = now.getFullYear();
       const month = String(now.getMonth() + 1).padStart(2, '0');
@@ -79,11 +79,9 @@
       const seconds = String(now.getSeconds()).padStart(2, '0');
       
       const formatted = `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
-      document.getElementById("datetime").textContent = formatted;
+      document.getElementById("datetime").textContent =
+        `取得日時：${formatted}`;
     }
-
-    // 1秒ごとに更新
-    setInterval(showDateTime, 1000);
   </script>
 </body>
 </html>
